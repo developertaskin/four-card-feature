@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* Border Colors */
+
+  --redColor: hsl(0, 78%, 62%);
+  --cyanColor: hsl(180, 62%, 55%);
+  --orangeColor: hsl(34, 97%, 64%);
+  --blueColor: hsl(212, 86%, 64%);
+
+  /* Secendary Colors */
+
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --whiteColor: hsl(0, 0%, 100%);
+
+  /* Font-weights */
+  --fontWeght200: 200;
+  --fontWeght400: 400;
+  --fontWeght600: 600;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* Common Css codes */
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background: var(--veryLightGray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fontWeght600);
+}
+
+p {
+  font-weight: var(--fontWeght200);
+}
+
+.bdcyn {
+  border-top: 3px solid var(--cyanColor);
+}
+
+.bdred {
+  border-top: 3px solid var(--redColor);
+}
+
+.bdoreng {
+  border-top: 3px solid var(--orangeColor);
+}
+
+.bdblue {
+  border-top: 3px solid var(--blueColor);
+}
+
+/* Container Css codes */
+#container {
+  width: 1272px;
+  height: 735px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header Css codes */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0% 28%;
+}
+
+.header h2 {
+  font-size: 32px;
+  font-weight: var(--fontWeght400);
+  color: var(--grayishBlue);
+}
+
+.header h1 {
+  font-size: 33px;
+  color: var(--veryDarkBlue);
+  font-weight: var(--fontWeght600);
+}
+
+.header p {
+  font-size: 16px;
+  color: var(--grayishBlue);
+  font-weight: var(--fontWeght200);
+}
+
+/* Main Area CSS codes  */
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 29% 29% 29%;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: var(--veryLightGray);
+  box-shadow: 0 0.7rem 1.5rem rgb(0 50 100 / 0.3);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 2rem rgb(0 50 100 / 0.4);
+}
+
+.textcard h3 {
+  font-size: 23px;
+  color: var(--veryDarkBlue);
+  margin-bottom: 10px;
+}
+
+.textcard p {
+  font-size: 15px;
+  color: var(--grayishBlue);
+  margin-bottom: 10px;
+  font-weight: var(--fontWeght400);
+}
+
+.card img {
+  width: 70px;
+  margin-left: auto;
+}
+
+.two_card {
+  display: grid;
+  gap: 25px;
+}
+
+/* Mobile Design CSS codes */
+@media screen and (max-width: 780px) {
+  /* Container Css codes */
+  #container {
+    width: 85%;
+    height: 100%;
+    margin-top: 100px;
+  }
+
+  /* Header Css codes */
+  .header {
+    padding: 0%;
+  }
+
+  .header h2 {
+    font-size: 30px;
+  }
+
+  .header h1 {
+    font-size: 31px;
+  }
+
+  .header p {
+    font-size: 18px;
+    font-weight: var(--fontWeght400);
+  }
+
+  /* Main Area CSS codes  */
+  .main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 75px;
+  }
+  
+  .card {
+    height: 100%;
+    box-shadow: 0 0.7rem 0.7rem rgb(0 50 100 / 0.3);
+  }
+
+  .main > .card:last-child {
+    margin-bottom: 75px;
+  }
+}
